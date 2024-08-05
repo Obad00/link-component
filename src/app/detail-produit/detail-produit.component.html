@@ -1,0 +1,14 @@
+<!-- Modal HTML -->
+<div class="modal-overlay" *ngIf="produit">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Détail produit</h1>
+        <button class="modal-close" (click)="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <h2>{{ produit.titre | uppercase }}</h2>
+        <p>Prix : {{ produit.prix | number:'1.2-2' }} €</p>
+      </div>
+    </div>
+  </div>
+  

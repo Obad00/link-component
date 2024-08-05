@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<h1 class="text-center mb-4">Mes Produits</h1>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let produit of produits">
+      <img [src]="produit.imageUrl" class="card-img-top" alt="{{ produit.titre }}">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">{{ produit.titre | uppercase }}</h5>
+          <p class="card-text text-secondary">{{ produit.prix | number:'1.2-2' }} €</p>
+          <button class="btn btn-primary w-100" (click)="voirDetails(produit)">
+            <i class="fas fa-info-circle"></i> <!-- Font Awesome icon -->
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
